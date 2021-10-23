@@ -5,6 +5,10 @@
         <title>web site</title>
         <link href="/ui/css/lib/bootstrap.min.css" rel="stylesheet"/>
         <link href="/ui/icons/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+        <check if="{{ @role == 1 }}">
+            <link href="/ui/css/lib/highlight.min.css" rel="stylesheet"/>
+        </check>
+        <link href="/ui/css/lib/quill.snow.css" rel="stylesheet"/>
         <link href="/ui/css/base.css" rel="stylesheet">
     </head>
     <body class="bg-dark bg-opacity-50">
@@ -16,6 +20,14 @@
 
     <script src="/ui/js/lib/bootstrap.min.js"></script>
     <script src="/ui/js/lib/jquery.min.js"></script>
+    <script src="/ui/js/lib/axios.min.js"></script>
+    <check if="{{ @role == 1 }}">
+        <script src="/ui/js/lib/highlight.min.js"></script>
+    </check>
+    <script src="/ui/js/lib/quill.min.js"></script>
     <script src="/ui/js/base.js"></script>
+    <check if="{{ @role == 1 }}">
+        <script src="/ui/js/admin.js"></script>
+    </check>
     </body>
 </html>

@@ -1,3 +1,3 @@
 $(document).ready(function(){
-    console.log('dom ready started');
+    console.log('admin loaded')
 })

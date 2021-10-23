@@ -18,5 +18,4 @@ class dashboardController extends dashboardModel implements cms_views
         $this->f3->set('content', 'dashboard/dashboard.html');
         echo \Template::instance()->render('/layout.html');
     }
-
 }

@@ -21,6 +21,9 @@ if ($f3->VERSION == 'DEV') {
 if ($f3->get('SESSION.login_state') == NULL) {
     $f3->set('SESSION.login_state', FALSE);
     $f3->set('SESSION.user_data', NULL);
+    $f3->set('role', NULL);
+}else{
+    $f3->set('role', $f3->get('SESSION.user_data')->get('role'));
 }
 
 if (!in_array($f3->get('PATH'), $f3->public_routes) && !$f3->get('SESSION.login_state')) {

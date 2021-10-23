@@ -1,0 +1,34 @@
+<ul class="nav nav-tabs mt-2">
+    <li class="nav-item">
+        <check if="{{ @PATH == '/dashboard' }}">
+            <true>
+                <a class="nav-link active" aria-current="/dashboard" href="/dashboard">dashboard home</a>
+            </true>
+            <false>
+                <a class="nav-link" aria-current="/dashboard" href="/dashboard">dashboard home</a>
+            </false>
+        </check>
+    </li>
+    <check if="{{ @role == 1 }}">
+        <li class="nav-item">
+            <check if="{{ @PATH == '/dashboard/home-articles' }}">
+                <true>
+                    <a class="nav-link active" aria-current="/dashboard/home-articles" href="/dashboard/home-articles">homepage articles</a>
+                </true>
+                <false>
+                    <a class="nav-link" aria-current="/dashboard/home-articles" href="/dashboard/home-articles">homepage articles</a>
+                </false>
+            </check>
+        </li>
+        <li class="nav-item">
+            <check if="{{ @PATH == '/dashboard/users' }}">
+                <true>
+                    <a class="nav-link active" aria-current="/dashboard/users" href="/dashboard/users">users</a>
+                </true>
+                <false>
+                    <a class="nav-link" aria-current="/dashboard/users" href="/dashboard/users">users</a>
+                </false>
+            </check>
+        </li>
+    </check>
+</ul>

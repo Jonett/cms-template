@@ -1,0 +1,32 @@
+<div class="card-header">
+    <h3>create article - public home</h3>
+</div>
+<div class="card-body">
+    <div class="card col-sm-12 col-md-6">
+        <div class="card-body p-0 m-0">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="article-header" placeholder="article header">
+                <label for="article-header">Article header</label>
+            </div>
+            <div class="card-title">
+                <p class="mb-0">Article content</p>
+            </div>
+            <div id="editor">
+                <div id="toolbar"></div>
+                <p>Hello!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, amet animi atque aut culpa eius ex id
+                    maiores nam omnis saepe, vitae voluptatum? Beatae, illum minus necessitatibus nulla provident
+                    quasi!</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <button id="save-article" type="button" class="w-100 btn btn-outline-success">Save</button>
+        </div>
+    </div>
+</div>
+<script>
+    window.request_content = {
+        'header': '',
+        'content': ''
+    };
+</script>

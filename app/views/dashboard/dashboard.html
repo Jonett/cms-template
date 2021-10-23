@@ -1,1 +1,33 @@
-<p>this is dashboard</p>
+
+<div class="row">
+    <div class="col-12 card rounded-0">
+        <include href="/dashboard/nav.html"/>
+    </div>
+    <div class="col-12 card rounded-0" style="min-height: 100vh !important;">
+        <switch expr="{{ @PATH }}">
+            <case value="{{ '/dashboard/home-articles' }}">
+                <check if="{{ @role == 1 }}">
+                    <true>
+                        <include href="/dashboard/pages/dashboard_home_articles.html"/>
+                    </true>
+                    <false>
+                        <include href="/errors/403.html"/>
+                    </false>
+                </check>
+            </case>
+            <case value="{{ '/dashboard/users' }}">
+                <check if="{{ @role == 1 }}">
+                    <true>
+                        <include href="/dashboard/pages/dashboard_users.html"/>
+                    </true>
+                    <false>
+                        <include href="/errors/403.html"/>
+                    </false>
+                </check>
+            </case>
+            <default>
+                <include href="/dashboard/pages/dashboard_home.html"/>
+            </default>
+        </switch>
+    </div>
+</div>
